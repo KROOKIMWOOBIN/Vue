@@ -1,0 +1,84 @@
+<template>
+  <div>
+    <nav class="sticky-nav">
+      <router-link to="/">
+        <h1 class="game_title">FPS</h1>
+      </router-link>
+      <router-link to="/" exact>홈</router-link>
+      <span class="separator">|</span>
+      <router-link to="/about">커뮤니티</router-link>
+      <span class="separator">|</span>
+      <router-link to="/userLogin">로그인</router-link>
+    </nav>
+    <router-view />
+    <footer class="footer">
+      <p>Created by Kim Woo-bin</p>
+      <p>Email: woodol4540@naver.com</p>
+    </footer>
+  </div>
+</template>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #538eca;
+  margin-top: 50px;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 75px;
+  background-image: url('./assets/1.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+}
+
+nav a {
+  font-weight: bold;
+  color: #538eca;
+  text-decoration: none;
+}
+
+.game_title {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  transform: translateX(30%);
+  font-size: 3em;
+  color: #bbbbbb;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: #181922;
+  padding-top: 100px; /* Add padding to the body to make content visible below the fixed navigation */
+}
+
+.separator {
+  color: #2c3e50;
+  margin: 20px;
+}
+.footer {
+  background-color: #181922;
+  padding: 20px 10px;
+  color: #538eca;
+  font-size: 0.9em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer p {
+  margin: 2px 0;
+}
+</style>
