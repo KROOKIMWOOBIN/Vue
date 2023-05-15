@@ -7,8 +7,6 @@
       <router-link to="/" exact>홈</router-link>
       <span class="separator">|</span>
       <router-link to="/about">커뮤니티</router-link>
-      <span class="separator">|</span>
-      <router-link to="/userLogin">로그인</router-link>
     </nav>
     <router-view />
     <footer class="footer">
@@ -34,11 +32,11 @@
   left: 0;
   right: 0;
   padding: 75px;
-  background-image: url('./assets/1.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 999;
+  background-color: #101f3a;
 }
 
 nav a {
@@ -67,7 +65,7 @@ body {
   margin: 20px;
 }
 .footer {
-  background-color: #181922;
+  background-color: #101f3a;
   padding: 20px 10px;
   color: #538eca;
   font-size: 0.9em;

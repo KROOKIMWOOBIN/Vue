@@ -47,13 +47,13 @@ export default {
 <style scoped>
 .message-box {
   display: inline-block;
-  border: 3px solid #4c339e;
-  border-radius: 10px;
+  border: 2px solid #224079;
+  border-radius: 0px;
   margin-top: 100px; /* Adjust the value to move the message box downward */
   text-align: left;
   padding: 0;
   margin: 0.6cm;
-  max-width: 600px; /* Adjust the maximum width as needed */
+  max-width: 800px; /* Adjust the maximum width as needed */
   box-sizing: border-box; /* Ensure the border width is included in the width calculation */
   overflow: auto; /* Hide any content that exceeds the maximum width */
   white-space: normal; /* Allow line breaks within the message box */
@@ -61,7 +61,7 @@ export default {
 
 .message-box p {
   font-size: 1.2em;
-  color: #93bee9;
+  color: #a8a8a8;
   margin: 0;
   text-align: left;
   padding: 0;
@@ -78,10 +78,10 @@ export default {
 
 .game-item {
   padding: 10px;
-  margin-bottom: 40px;
-  border: 1px solid #4c339e;
-  border-radius: 10px;
-  font-size: 0.5cm;
+  margin-bottom: 0px;
+  border: 2px solid #101f3a;
+  border-radius: 0px;
+  font-size: 0.6cm;
 }
 
 .game-item a {
