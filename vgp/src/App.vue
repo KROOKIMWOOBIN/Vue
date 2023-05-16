@@ -12,11 +12,40 @@
     <footer class="footer">
       <p>Created by Kim Woo-bin</p>
       <p>Email: woodol4540@naver.com</p>
+      <button class="upbtn" @click="scrollToTop">UP</button>
     </footer>
-  </div>
+  </div><br><br>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToTop() {
+      let intervalId = setInterval(() => {
+        let position = window.pageYOffset;
+        if (position > 0) {
+          window.scrollTo(0, position - position / 10);
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 10);
+    },
+  },
+};
+</script>
+
 <style>
+.upbtn {
+  float: right;
+  margin-right: 1cm;
+  background-color: rgb(46, 66, 180);
+  border: none;
+  padding: 0.2cm;
+  border-radius: 10px;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
