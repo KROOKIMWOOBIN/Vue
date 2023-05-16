@@ -14,7 +14,7 @@
       <p>Email: woodol4540@naver.com</p>
       <button class="upbtn" @click="scrollToTop">UP</button>
     </footer>
-  </div><br><br>
+  </div><br><br><br><br><br>
 </template>
 
 <script>
