@@ -53,15 +53,17 @@ export default {
   display: inline-block;
   border: 2px solid #224079;
   border-radius: 0px;
-  margin-top: 100px; /* Adjust the value to move the message box downward */
+  margin-top: 100px; 
   text-align: left;
   width: 50%;
   padding: 0;
   margin: 0.6cm;
-  max-width: 800px; /* Adjust the maximum width as needed */
-  box-sizing: border-box; /* Ensure the border width is included in the width calculation */
-  overflow: auto; /* Hide any content that exceeds the maximum width */
-  white-space: normal; /* Allow line breaks within the message box */
+  max-width: 800px; 
+  box-sizing: border-box; 
+  overflow: auto; 
+  white-space: normal; 
+  border-radius: 10px;
+  background-color: #2b2e57;
 }
 
 .message-box p {
@@ -80,13 +82,18 @@ export default {
   left: 60px;
   padding-left: 20px;
 }
-
 .game-item {
   padding: 10px;
-  margin-bottom: 0px;
-  border: 2px solid #101f3a;
-  border-radius: 0px;
+  margin-bottom: 7px;
+  border: 2px solid #0f244b;
+  border-radius: 7px;
+  background-color: rgb(16, 31, 58);
   font-size: 0.6cm;
+  box-shadow: 2px 2px 5px rgba(40, 48, 61, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+.game-item:hover {
+  background-color: rgb(42, 57, 82);
 }
 
 .game-item a {

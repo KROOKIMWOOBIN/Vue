@@ -10,8 +10,7 @@
     </nav>
     <router-view />
     <footer class="footer">
-      <p>Created by Kim Woo-bin</p>
-      <p>Email: woodol4540@naver.com</p>
+      <p>Created by Kim Woo-bin<br>Email: woodol4540@naver.com</p>
       <button class="upbtn" @click="scrollToTop">UP</button>
     </footer>
   </div><br><br><br><br><br>
@@ -37,15 +36,21 @@ export default {
 <style>
 .upbtn {
   float: right;
-  margin-right: 1cm;
-  background-color: rgb(46, 66, 180);
+  margin-right: 1.2cm;
+  margin-bottom: 1cm;
+  margin-top: 1cm;  /* 추가된 코드 */
+  background-color: rgba(118, 174, 241, 1);
   border: none;
-  padding: 0.2cm;
+  padding: 0.2cm 0.4cm;
   border-radius: 10px;
+  border: 2px solid rgb(41, 120, 218);
   animation-delay: 0;
   animation-duration: 1s;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  transition: all 0.1s ease-in-out;
+  border-radius: 10px;
+  color: white;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,18 +59,23 @@ export default {
   color: #538eca;
   margin-top: 50px;
 }
+.upbtn:hover {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
 
 .sticky-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 75px;
+  padding: 60px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 999;
   background-color: #101f3a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
 }
 
 nav a {
@@ -76,8 +86,8 @@ nav a {
 
 .game_title {
   position: absolute;
-  top: 20px;
-  left: 40px;
+  top: 5px;
+  left: 70px;
   transform: translateX(30%);
   font-size: 3em;
   color: #bbbbbb;
@@ -95,17 +105,22 @@ body {
 }
 .footer {
   background-color: #101f3a;
-  padding: 20px 10px;
+  padding: 0;
   color: #538eca;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .footer p {
-  margin: 2px 0;
+  margin: 1px 0;
 }
 </style>
