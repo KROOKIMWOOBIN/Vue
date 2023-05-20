@@ -38,7 +38,7 @@ export default {
   float: right;
   margin-right: 1.2cm;
   margin-bottom: 1cm;
-  margin-top: 1cm;  /* 추가된 코드 */
+  margin-top: 1cm;  
   background-color: rgba(118, 174, 241, 1);
   border: none;
   padding: 0.2cm 0.4cm;
@@ -96,7 +96,7 @@ nav a {
 
 body {
   background-color: #181922;
-  padding-top: 100px; /* Add padding to the body to make content visible below the fixed navigation */
+  padding-top: 100px; 
 }
 
 .separator {
