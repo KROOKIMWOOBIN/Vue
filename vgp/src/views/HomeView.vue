@@ -64,6 +64,7 @@ export default {
   white-space: normal; 
   border-radius: 10px;
   background-color: #2b2e57;
+  text-decoration: none;
 }
 
 .message-box p {
@@ -84,24 +85,24 @@ export default {
 }
 .game-item {
   padding: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
   border: 2px solid #0f244b;
   border-radius: 7px;
   background-color: rgb(16, 31, 58);
-  font-size: 0.6cm;
+  font-size: 0.7cm;
   box-shadow: 2px 2px 5px rgba(40, 48, 61, 0.5);
   transition: background-color 0.3s ease-in-out;
+  text-align: center;
 }
 .game-item:hover {
   background-color: rgb(42, 57, 82);
 }
 
-.game-item a {
+.game-item {
   text-decoration: none;
   color: #538eca;
   cursor: pointer;
 }
-
 .game-item a.selected {
   color: #2fc260;
 }
