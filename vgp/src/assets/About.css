@@ -27,6 +27,10 @@
     margin-right: 100px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.1s ease-in-out;
+    flex-shrink: 0;
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
 }
 
 .AddFont:hover {
@@ -184,4 +188,72 @@
     border-radius: 5px;
     background-color: #f9f9f9;
     color: #333;
+}
+
+.comment-input {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 250px;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+}
+
+.input-field input[type="text"] {
+    width: 200px;
+    height: 32px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.input-field button {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.input-field button:hover {
+    background-color: #0056b3;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    max-width: 250px;
+    margin-top: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment span {
+    font-size: 15px;
+    color: #888;
+}
+
+.comment button {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.comment button:hover {
+    background-color: #0056b3;
 }
