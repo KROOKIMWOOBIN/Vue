@@ -23,16 +23,15 @@
         <!-- 댓글 표시 -->
         <div class="comments">
           <div v-for="comment in post.comments" :key="comment.id" class="comment">
-            <p>{{ comment.content }}</p><br>
-            <span>{{ comment.author }}</span><br>
-            <br><button class="delete-button" @click="deleteComment(post, comment)">삭제</button>
+            <p>{{ comment.content }}<button class="delete-button" @click="deleteCommentConfirmation(post, comment)">삭제</button></p>
+            <br><span>{{ comment.author }}</span><br>
           </div>
         </div>
         <!-- 댓글 작성을 위한 입력 폼 -->
         <div class="comment-input">
           <div class="input-field">
             <input type="text" :value="getCommentContent(post.id)" @input="updateCommentContent(post.id, $event.target.value)" placeholder="작성자">
-            <input type="text" :value="getCommentAuthor(post.id)" @input="updateCommentAuthor(post.id, $event.target.value)" placeholder="댓글">
+            <textarea :value="getCommentAuthor(post.id)" @input="updateCommentAuthor(post.id, $event.target.value)" placeholder="댓글"></textarea>
             <br><button class="btnOn" @click="addComment(post)">작성</button>
           </div>
         </div>
@@ -45,7 +44,7 @@
         <div class="input-field">
           <input type="text" v-model="loggedInId" placeholder="ID">
           <input type="text" v-model="newPost.title" placeholder="제목">
-          <textarea v-model="newPost.content" cols="22" role="10" placeholder="내용"></textarea>
+          <textarea v-model="newPost.content" cols="20" role="10" placeholder="내용"></textarea>
           <!-- 이미지 업로드를 위한 input 요소 추가 -->
           <input type="file" @change="handleImageUpload" accept="image/*">
           <!-- 업로드된 이미지 미리보기를 위한 이미지 요소 -->
@@ -138,6 +137,11 @@ export default {
         commentInput.content = "";
         commentInput.author = "";
         this.savePostsToLocalStorage(); // 게시물을 로컬 스토리지에 저장하는 함수 호출
+      }
+    },
+    deleteCommentConfirmation(post, comment) {
+      if (confirm("정말로 댓글을 삭제하시겠습니까?")) {
+        this.deleteComment(post, comment);
       }
     },
     deleteComment(post, comment) {

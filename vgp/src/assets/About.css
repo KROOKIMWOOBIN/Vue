@@ -100,12 +100,23 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    border: 2px solid #011429;
+    max-width: 300px;
+    max-height: 350px;
+    margin-left: 100px;
+    background-color: #102133;
 }
 
 .input-field {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field textarea {
+    overflow: auto;
 }
 
 .button-group {
@@ -144,6 +155,7 @@
     padding: 30px;
     height: 250px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: auto;
 }
 
 .title-box {
@@ -178,6 +190,7 @@
     max-width: 100%;
     max-height: 120px;
     margin-top: 10px;
+    height: auto;
 }
 
 .input-field input,
@@ -234,21 +247,29 @@
     max-width: 250px;
     margin-top: 10px;
     background-color: #ffffff;
-    overflow: auto;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .comment p {
     margin: 0;
     font-size: 20px;
     text-align: left;
+    overflow: auto;
+    flex-grow: 1;
 }
 
 .comment span {
     font-size: 18px;
     color: #080808;
     word-wrap: break-word;
+    overflow: auto;
 }
 
 .content-box {
     color: black;
+}
+
+.comment .delete-button {
+    margin-left: 20px;
 }
