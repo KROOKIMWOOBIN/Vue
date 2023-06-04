@@ -23,8 +23,8 @@
         <!-- 댓글 표시 -->
         <div class="comments">
           <div v-for="comment in post.comments" :key="comment.id" class="comment">
-            <p>{{ comment.content }}</p>
-            <span>{{ comment.author }}</span>
+            <p>{{ comment.content }}</p><br>
+            <span>{{ comment.author }}</span><br>
             <button class="delete-button" @click="deleteComment(post, comment)">삭제</button>
           </div>
         </div>
