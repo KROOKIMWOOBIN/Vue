@@ -13,7 +13,7 @@
           <div class="title-box">
             <h3>{{ post.title }}</h3>
             <button class="delete-button" @click="deletePostConfirmation(post)">삭제</button>
-          </div>
+          </div><br>
           <!-- 게시물 내용 -->
           <div class="content-box">
             <p>{{ post.content }}</p>
@@ -25,7 +25,7 @@
           <div v-for="comment in post.comments" :key="comment.id" class="comment">
             <p>{{ comment.content }}</p><br>
             <span>{{ comment.author }}</span><br>
-            <button class="delete-button" @click="deleteComment(post, comment)">삭제</button>
+            <br><button class="delete-button" @click="deleteComment(post, comment)">삭제</button>
           </div>
         </div>
         <!-- 댓글 작성을 위한 입력 폼 -->
@@ -33,7 +33,7 @@
           <div class="input-field">
             <input type="text" :value="getCommentContent(post.id)" @input="updateCommentContent(post.id, $event.target.value)" placeholder="작성자">
             <input type="text" :value="getCommentAuthor(post.id)" @input="updateCommentAuthor(post.id, $event.target.value)" placeholder="댓글">
-            <button class="btnOn" @click="addComment(post)">작성</button>
+            <br><button class="btnOn" @click="addComment(post)">작성</button>
           </div>
         </div>
       </div>
