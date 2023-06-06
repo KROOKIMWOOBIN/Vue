@@ -19,7 +19,7 @@
 </template>
 
 <style>
-@import "./assets/App.css";
+@import "@/assets/App.css";
 </style>
 
 <script>

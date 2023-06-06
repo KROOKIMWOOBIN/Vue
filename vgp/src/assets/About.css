@@ -18,19 +18,19 @@
 }
 
 .AddFont {
-    font-size: 1.5em;
     color: #538eca;
     border-radius: 10px;
-    text-align: right;
+    text-align: center;
     /* 버튼 텍스트를 오른쪽 정렬 */
     margin-top: 20px;
     margin-right: 100px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 5px 5px rgba(204, 196, 196, 0.3);
     transition: all 0.1s ease-in-out;
     flex-shrink: 0;
-    width: 100px;
+    width: 90px;
     height: 40px;
-    font-size: 25px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .AddFont:hover {
@@ -105,6 +105,7 @@
     max-height: 350px;
     margin-left: 100px;
     background-color: #102133;
+    box-shadow: 2px 2px 5px rgba(237, 248, 187, 0.3);
 }
 
 .input-field {
@@ -154,7 +155,7 @@
     background-color: #f9f9f9;
     padding: 30px;
     height: 250px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(234, 255, 140, 0.3);
     overflow: auto;
 }
 
@@ -210,6 +211,7 @@
     border-radius: 4px;
     max-width: 250px;
     max-height: 200px;
+    box-shadow: 2px 2px 5px rgba(234, 255, 140, 0.3);
 }
 
 .input-field {
@@ -249,6 +251,7 @@
     background-color: #ffffff;
     max-height: 200px;
     overflow-y: auto;
+    box-shadow: 2px 2px 5px rgba(237, 248, 187, 0.3);
 }
 
 .comment p {

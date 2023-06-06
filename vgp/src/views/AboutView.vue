@@ -23,21 +23,25 @@
         <!-- 댓글 표시 -->
         <div class="comments">
           <div v-for="comment in post.comments" :key="comment.id" class="comment">
-            <p>{{ comment.content }}<button class="delete-button" @click="deleteCommentConfirmation(post, comment)">삭제</button></p>
+            <p>{{ comment.content }}<button class="delete-button"
+                @click="deleteCommentConfirmation(post, comment)">삭제</button></p>
             <br><span>{{ comment.author }}</span><br>
           </div>
-        </div>
-        <!-- 댓글 작성을 위한 입력 폼 -->
-        <div class="comment-input">
-          <div class="input-field">
-            <input type="text" :value="getCommentContent(post.id)" @input="updateCommentContent(post.id, $event.target.value)" placeholder="작성자">
-            <textarea :value="getCommentAuthor(post.id)" @input="updateCommentAuthor(post.id, $event.target.value)" placeholder="댓글"></textarea>
-            <br><button class="btnOn" @click="addComment(post)">작성</button>
+          <!-- 댓글 작성을 위한 입력 폼 -->
+          <div v-if="showCommentInput[post.id]" class="comment-input">
+            <div class="input-field">
+              <input type="text" :value="getCommentContent(post.id)"
+                @input="updateCommentContent(post.id, $event.target.value)" placeholder="작성자">
+              <textarea :value="getCommentAuthor(post.id)" @input="updateCommentAuthor(post.id, $event.target.value)"
+                placeholder="댓글"></textarea>
+              <br><button class="btnOn" @click="addComment(post)">작성</button>
+            </div>
           </div>
+          <!-- 댓글 작성 버튼 -->
+          <button v-if="!showCommentInput[post.id]" class="AddFont" @click="toggleCommentInput(post.id)">댓글 작성</button>
         </div>
       </div>
     </div>
-
     <!-- 새 게시물 작성을 위한 입력 폼 -->
     <div v-if="showInput" class="post-input">
       <div class="input-box">
@@ -61,7 +65,7 @@
 </template>
 
 <style>
-@import "../assets/About.css";
+@import "@/assets/About.css";
 </style>
 
 <script>
@@ -77,6 +81,7 @@ export default {
       showInput: false, // 새 게시물 입력 폼을 표시하는 상태 변수
       loggedInId: "", // 게시물에 접근할 수 있는 권한
       commentInputs: {}, // 댓글 입력을 위한 객체 맵
+      showCommentInput: {}, // 게시물 별 댓글 입력 폼 표시 상태 변수
     };
   },
   created() {
@@ -139,6 +144,10 @@ export default {
         this.savePostsToLocalStorage(); // 게시물을 로컬 스토리지에 저장하는 함수 호출
       }
     },
+    cancelComment(postId) {
+      this.commentInputs[postId] = { content: "", author: "" }; // 댓글 입력 폼 초기화
+      this.showCommentInput[postId] = false; // 댓글 입력 폼 닫기
+    },
     deleteCommentConfirmation(post, comment) {
       if (confirm("정말로 댓글을 삭제하시겠습니까?")) {
         this.deleteComment(post, comment);
@@ -190,6 +199,14 @@ export default {
         this.commentInputs[postId] = { content: "", author: "" };
       }
       this.commentInputs[postId].author = value;
+    },
+    toggleCommentInput(postId) {
+      // 게시물 별 댓글 입력 폼 표시 상태를 토글
+      if (!this.showCommentInput[postId]) {
+        // 다른 댓글 작성을 누른 경우 현재 작성하던 댓글 내용 초기화
+        this.commentInputs[postId] = { content: "", author: "" };
+      }
+      this.showCommentInput = { [postId]: !this.showCommentInput[postId] };
     },
   },
 };

@@ -12,66 +12,7 @@
 </template>
 
 <style>
-.message-box {
-  display: inline-block;
-  border: 2px solid #224079;
-  border-radius: 0px;
-  margin-top: 100px;
-  text-align: left;
-  width: 50%;
-  padding: 0;
-  margin: 0.6cm;
-  max-width: 800px;
-  box-sizing: border-box;
-  overflow: auto;
-  white-space: normal;
-  border-radius: 10px;
-  background-color: #2b2e57;
-  text-decoration: none;
-}
-
-.message-box p {
-  font-size: 1.2em;
-  color: #a8a8a8;
-  margin: 0;
-  text-align: left;
-  padding: 0;
-}
-
-.game-list {
-  list-style-type: none;
-  padding: 0;
-  position: absolute;
-  top: 162px;
-  left: 50px;
-  padding-left: 20px;
-}
-
-.game-item {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid #0f244b;
-  border-radius: 7px;
-  background-color: rgb(16, 31, 58);
-  font-size: 0.7cm;
-  box-shadow: 2px 2px 5px rgba(40, 48, 61, 0.5);
-  transition: background-color 0.3s ease-in-out;
-  text-align: center;
-}
-
-.game-item:hover {
-  background-color: rgb(42, 57, 82);
-}
-
-.game-item {
-  text-decoration: none;
-  color: #538eca;
-  cursor: pointer;
-}
-
-.game-item a.selected {
-  color: #2fc260;
-}
+@import "@/assets/Home.css";
 </style>
 
 <script>
