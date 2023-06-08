@@ -15,7 +15,7 @@
       <p>Created by Kim Woo-bin<br>Email: woodol4540@naver.com</p>
       <button class="upbtn" @click="scrollToTop">UP</button>
     </footer>
-  </div>
+  </div><br><br><br><br><br>
 </template>
 
 <style>
