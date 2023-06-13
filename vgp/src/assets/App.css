@@ -16,6 +16,10 @@
     color: white;
 }
 
+.game_title {
+    text-shadow: 2px 2px 4px silver; /* 그림자 초기값 */
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

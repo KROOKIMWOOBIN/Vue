@@ -1,0 +1,41 @@
+input[type="button"] {
+    background-color: rgba(118, 174, 241, 1);
+    border: none;
+    border-radius: 10px;
+    border: 2px solid rgb(41, 120, 218);
+    animation-delay: 0;
+    animation-duration: 1s;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+    color: white;
+}
+
+input[type="button"]:hover {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"] {
+    background-color: rgba(118, 174, 241, 1);
+    border: none;
+    padding: 0.2cm 0.4cm;
+    border-radius: 10px;
+    border: 2px solid rgb(41, 120, 218);
+    animation-delay: 0;
+    animation-duration: 1s;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    width: 500px;
+    margin: auto;
+}

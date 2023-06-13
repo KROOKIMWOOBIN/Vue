@@ -206,7 +206,15 @@ export default {
         // 다른 댓글 작성을 누른 경우 현재 작성하던 댓글 내용 초기화
         this.commentInputs[postId] = { content: "", author: "" };
       }
-      this.showCommentInput = { [postId]: !this.showCommentInput[postId] };
+      this.showCommentInput = { ...this.showCommentInput, [postId]: !this.showCommentInput[postId] };
+    },
+  },
+  watch: {
+    posts: {
+      handler(newPosts) {
+        this.savePostsToLocalStorage(newPosts);
+      },
+      deep: true,
     },
   },
 };

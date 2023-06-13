@@ -8,6 +8,12 @@
         <router-link to="/" exact>홈</router-link>
         <span class="separator">|</span>
         <router-link to="/about">커뮤니티</router-link>
+        <span class="separator">|</span>
+        <router-link to="/login">로그인</router-link>
+        <span class="separator">|</span>
+        <router-link to="/sign">회원가입</router-link>
+        <span class="separator">|</span>
+        <router-link to="/my">자기소개</router-link>
       </nav>
     </header>
     <router-view />
@@ -20,10 +26,6 @@
 
 <style>
 @import "@/assets/App.css";
-
-.game_title {
-  text-shadow: 2px 2px 4px silver; /* 그림자 초기값 */
-}
 </style>
 
 <script>
