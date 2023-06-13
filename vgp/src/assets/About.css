@@ -59,7 +59,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     /* 새 게시물 입력 폼이 전체 너비를 차지 */
     margin-top: 150px;
 }
@@ -106,6 +106,7 @@
     margin-left: 100px;
     background-color: #102133;
     box-shadow: 2px 2px 5px rgba(237, 248, 187, 0.3);
+    margin-left: auto;
 }
 
 .input-field {
